@@ -6,10 +6,21 @@
     <title>Button</title>
 </head>
 <body>
-    Some Cool Buttons
+    <!-- <h1>Some Cool Buttons</h1> -->
     <div>
-        <p>Futuristic Button </p>
-        <button>bang</button>
+        <!-- <p>Futuristic Button </p> -->
+        <a href="#">
+            <i></i><i></i>
+            <span>bang bang</span>
+        </a>
     </div>
+    <script>
+        let btn = document.querySelector('a');
+        btn.addEventListener('mousemove', e =>{
+            let rect = e.target.getBoundingClientRect();
+            let x = e.clientX * 3 - rect.left;
+            btn.style.setProperty('--x',x + 'deg')
+        })
+    </script>
 </body>
 </html>
